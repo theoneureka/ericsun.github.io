@@ -1,1 +1,1 @@
-This website uses HTML, CSS, and Javascript to create an interactable personal website.
+This website uses HTML, CSS, and Javascript to create an interactable personal website. Upon entering the landing page, there is further access to an Assignments page and through the Assignments page, a visualizations page.
