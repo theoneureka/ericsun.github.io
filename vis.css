@@ -18,7 +18,8 @@ a {
 }
 
 svg {
-    border: solid lightgray;
+    border: solid white;
+    margin: 1rem;
 }
 
 .flex {

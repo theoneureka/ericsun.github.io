@@ -29,7 +29,7 @@ middle.addEventListener('click', () => {
     });
     
     link.forEach(a => {
-        a.style.color = colors[colorI];
+        a.style.color = colors2[colorI];
     });
 });
 

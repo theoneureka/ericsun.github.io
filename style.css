@@ -8,11 +8,11 @@ body {
     background-color: #0d0a14;
 }
 
-a, li, p {
+li, p {
     color:peachpuff;
 }
 
-h2 {
+h2, a {
     color: lightpink;
 }
 
