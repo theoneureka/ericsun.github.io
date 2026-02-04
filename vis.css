@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+    background-color: #0d0a14;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #101b2b;
+    color: lightpink;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+a {
+    color:peachpuff;
+}
+
+svg {
+    border: solid lightgray;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem;
+}

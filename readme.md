@@ -1,0 +1,1 @@
+This website uses HTML, CSS, and Javascript to create an interactable personal website.
