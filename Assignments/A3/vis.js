@@ -121,8 +121,7 @@ fetchData().then(async (data) => {
     .markBar()
     .data(data)
     .transform(
-        vl.filter('datum["platform"] == "PC"'),
-        vl.filter('datum["sales_region"] == "na_sales" || datum["sales_region"] == "eu_sales" || datum["sales_region"] == "jp_sales" || datum["sales_region"] == "other_sales"')
+        vl.filter('datum["platform"] == "PC"')
     )
     .encode(
         vl.x().fieldQ("sales_amount").aggregate("sum"),
@@ -138,8 +137,7 @@ fetchData().then(async (data) => {
     .markBar()
     .data(data)
     .transform(
-        vl.filter('datum["platform"] == "DS"'),
-        vl.filter('datum["sales_region"] == "na_sales" || datum["sales_region"] == "eu_sales" || datum["sales_region"] == "jp_sales" || datum["sales_region"] == "other_sales"')
+        vl.filter('datum["platform"] == "DS"')
     )
     .encode(
         vl.x().fieldQ("sales_amount").aggregate("sum"),
