@@ -124,7 +124,7 @@ fetchData().then(async (data) => {
         vl.filter('datum["platform"] == "PC"')
     )
     .encode(
-        vl.x().fieldQ("sales_amount").aggregate("sum"),
+        vl.x().fieldQ("sales_amount").aggregate("sum").scale({ domain: [0, 400] }),
         vl.y().fieldN("sales_region").sort("-x"),
         vl.color().value("pink")
     )
@@ -148,6 +148,7 @@ fetchData().then(async (data) => {
     .height(400)
     .toSpec();
 
+    // Question 4
     // Visualization of Shooter games sales in EU on PC over the years
     const vlSpec9 = vl
     .markBar()
