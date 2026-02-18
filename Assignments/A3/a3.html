@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <link rel="stylesheet" href="a3.css" />
+    <script>
+      const options = {
+        config: {
+          // Vega-Lite default configuration
+        },
+        init: (view) => {
+          // initialize tooltip handler
+          view.tooltip(new vegaTooltip.Handler().call);
+        },
+        view: {
+          // view constructor options
+          // remove the loader if you don't want to default to vega-datasets!
+          loader: vega.loader({
+            baseURL: "https://cdn.jsdelivr.net/npm/vega-datasets@2/",
+          }),
+          renderer: "canvas",
+        },
+      };
+
+      // register vega and vega-lite with the API
+      vl.register(vega, vegaLite, options);
+    </script>
+    <style></style>
+  </head>
+  <body>
+    <div id="header">
+      <h2>Assignment 3 Vega-Lite</h2>
+      <a href="../../index.html">Home</a>
+    </div>
+    <div class="container1">
+      <div class="container">
+        <!-- <h2>General</h2>
+        <p>Most to least popular platforms</p>
+        <div id="view"></div>
+        <p>Most to least popular genres</p>
+        <div id="view2"></div>
+        <div id="view11"></div> -->
+        <!-- visualization goes into this div you can create multiple divs and give them IDs -->
+        <h2>Visualization #1</h2>
+        <h3>Which of the Wii, DS, PS4, and Xbox360 had the most sales, and of those sales, which genre was most popular?</h3>
+        <p>Visualization of global sales of Wii, DS, PS4, and Xbox360 Games</p>
+        <div id="view3"></div>
+        <p>Visualization of global sales of Wii, DS, PS4, and Xbox360 Games sorted by genres</p>
+        <div id="view4"></div>
+        <h2>Visualization #2</h2>
+        <h3>How did the sale of Shooter games compare to Strategy game sales across the years on PC?</h3>
+        <p>Visualization of Shooter game sales by year on PC</p>
+        <div id="view5"></div>
+        <p>Visualization of Strategy game sales by year on PC</p>
+        <div id="view6"></div>
+        <h2>Visualization #3</h2>
+        <h3>How does PC sales compare to DS sales across regions?</h3>
+        <p>Visualization of PC sales across regions</p>
+        <div id="view7"></div>
+        <p>Visualization of DS sales across regions</p>
+        <div id="view8"></div>
+        <h2>Visualization #4</h2>
+        <h3>How has sales of Shooter games on PC in EU grown compared to NA?</h3>
+        <p>Visualization of Shooter games sales in EU on PC over the years</p>
+        <div id="view9"></div>
+        <p>Visualization of Shooter games sales in NA on PC over the years</p>
+        <div id="view10"></div>
+      </div>
+    </div>
+    <script type="module" src="vis.js"></script>
+  </body>
+</html>
